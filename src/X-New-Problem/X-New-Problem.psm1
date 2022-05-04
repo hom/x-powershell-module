@@ -9,7 +9,7 @@ function X-New-Problem ($name) {
   New-Item $directory\test.js
 }
 
-New-Alias xnp X-New-Problem
+New-Alias -Name xnp -Value X-New-Problem -Scope Global
 
 Export-ModuleMember -Function X-New-Problem
 Export-ModuleMember -Alias xnp

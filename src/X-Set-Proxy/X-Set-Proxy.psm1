@@ -3,7 +3,7 @@ function X-Set-Proxy () {
   Set-Item Env:https_proxy -Value 'http://127.0.0.1:7890'
 }
 
-New-Alias xsp X-Set-Proxy
+New-Alias -Name xsp -Value X-Set-Proxy -Scope Global
 
 Export-ModuleMember -Function X-Set-Proxy
 Export-ModuleMember -Alias xsp
