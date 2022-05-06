@@ -1,5 +1,5 @@
 function X-Set-Proxy-Prompt () {
-  "PROXY $($executionContext.SessionState.Path.CurrentLocation)$('>' * ($nestedPromptLevel + 1)) "
+  "[PROXY] $($executionContext.SessionState.Path.CurrentLocation)$('>' * ($nestedPromptLevel + 1)) "
 }
 
 New-Alias -Name Prompt -Value X-Set-Proxy-Prompt -Scope Global

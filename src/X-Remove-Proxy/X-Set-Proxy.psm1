@@ -2,6 +2,7 @@ function X-Remove-Proxy () {
   Remove-Item Env:HTTP_PROXY
   Remove-Item Env:HTTPS_PROXY
   Write-Host "Remove proxy channel"
+  prompt
 }
 
 New-Alias -Name xrp -Value X-Remove-Proxy -Scope Global
