@@ -5,7 +5,6 @@ function X-Set-Proxy () {
 }
 
 New-Alias -Name xsp -Value X-Set-Proxy -Scope Global
-New-Alias -Name xrp -Value X-Remove-Proxy -Scope Global
 
 Export-ModuleMember -Function X-Set-Proxy
 Export-ModuleMember -Alias xsp
