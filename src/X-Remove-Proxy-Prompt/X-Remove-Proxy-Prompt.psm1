@@ -5,7 +5,7 @@ function X-Remove-Proxy-Prompt () {
   # .ExternalHelp System.Management.Automation.dll-help.xml
 }
 
-New-Alias -Name Prompt -Value X-Remove-Proxy-Prompt -Scope Global
+New-Alias -Name Prompt -Value X-Remove-Proxy-Prompt -Scope Global -Force
 
 Export-ModuleMember -Function X-Remove-Proxy-Prompt
 Export-ModuleMember -Alias Prompt
