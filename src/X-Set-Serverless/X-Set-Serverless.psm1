@@ -1,8 +1,8 @@
-function X-Set-Serverless () {
+function X-Set-Serverless ($key, $sercret) {
   Set-Item Env:SERVERLESS_PLATFORM_VENDOR -Value 'aws'
   Set-Item Env:SLS_GEO_LOCATION -Value 'us'
-  Set-Item Env:AWS_ACCESS_KEY_ID -Value 'AKIAZHGJDTZHH6243II2'
-  Set-Item Env:AWS_SECRET_ACCESS_KEY -Value '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'
+  Set-Item Env:AWS_ACCESS_KEY_ID -Value $key
+  Set-Item Env:AWS_SECRET_ACCESS_KEY -Value $sercret
   Write-Warning "Set serverless variable"
 }
 
