@@ -1,5 +1,5 @@
 function X-New-Problem ($name) {
-  $directory = Join-Path -Path D:\Ruxf\leetcode\src\ -ChildPath $name
+  $directory = Join-Path -Path D:\repository\leetcode\src\ -ChildPath $name
   if ((Test-Path $directory) -eq "True") {
     return Write-Warning(-Join('The directory ', $directory, ' is already exists.'))
   }
