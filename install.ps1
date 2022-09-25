@@ -8,6 +8,7 @@ function Test-Adminstrator {
     )
     
 }
+
 if (Test-Adminstrator) {
     foreach ($module in $modules) {
         Write-Host $module
