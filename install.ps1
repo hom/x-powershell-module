@@ -3,10 +3,7 @@ $location = Get-Location
 $modules = Get-ChildItem -Path "$location\src\" -Directory
 
 function Test-Adminstrator {
-    [bool] (
-        (whoami /groups) -Match "S-1-16-12288"
-    )
-    
+    [bool] ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
 }
 
 if (Test-Adminstrator) {
