@@ -7,6 +7,10 @@ function X-New-Problem ($name) {
   New-Item $directory\index.js
   New-Item $directory\problem.md
   New-Item $directory\test.js
+  New-Item $directory\main.py
+  New-Item $directory\main.c
+  New-Item $directory\main.cpp
+  New-Item $directory\main.rs
 }
 
 New-Alias -Name xnp -Value X-New-Problem -Scope Global
