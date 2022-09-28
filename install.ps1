@@ -14,4 +14,5 @@ if (Test-Adminstrator) {
     }
 } else {
     Write-Error "This script neetd to run as Adminstrator"
+    Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File $PSCommandPath" -Verb RunAs
 }
