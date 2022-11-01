@@ -4,6 +4,7 @@ param (
 )
 # Get current root location directory
 $location = Get-Location
+write-Host $location
 $modules = Get-ChildItem -Path "$location\src\" -Directory
 
 function Test-Adminstrator {
@@ -26,5 +27,6 @@ if (Test-Adminstrator) {
     }
 } else {
     Write-Error "This script neetd to run as Adminstrator"
-    Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File $PSCommandPath" -Verb RunAs
+    $command = "-NoExit -NoProfile -Command `"cd $location ; .\setup.ps1`""
+    Start-Process -FilePath "powershell.exe" -WorkingDirectory $location -ArgumentList $command -Verb RunAs
 }
